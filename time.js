@@ -23,18 +23,3 @@ function startTime() {
 
 startTime();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
