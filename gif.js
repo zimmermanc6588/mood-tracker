@@ -1,55 +1,36 @@
 // 55L1FEuI3s75xESs6EeHvTCkRJreLIsO <-- Giphy API key
+const button = document.getElementById(`btnsearch`);
 
 let APIKEY = `55L1FEuI3s75xESs6EeHvTCkRJreLIsO`;
 
-const loadGif = async () => {
-    try {
-        const url = `http://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`
-        const res = await fetch(url);
-        console.log(res.ok)
-        const gif = await res.json();
-        return gif;
-    }catch(err) {
-        console.error(err)
-    }    
-    document.getElementById("giphyme").innerHTML = '<center><img src = "'+gif+'"  title="GIF via Giphy"></center>';
-};
+// Create a function called `myFunction()`
+function giphyMe(event) {
+    event.preventDefault();
+    // Create a variable called `searchTerm` that will use `document.querySelector()` to target the `id` of the input
+    // Use `.value` to capture the value of the input and store it in the variable
+    var searchTerm = document.getElementById(`mood`).value;
+    // Make a `fetch` request concatenating the `searchTerm` to the query URL
+    // Remember to add your API key at the end
+    fetch(
+      'https://api.giphy.com/v1/gifs/search?q=' +
+        searchTerm +
+        '&api_key=55L1FEuI3s75xESs6EeHvTCkRJreLIsO&limit=1'
+    )
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(response) {
+        console.log(response.data[0]);
+        // Create a variable that will select the <div> where the GIF will be displayed
+        var responseContainerEl = document.querySelector('#response-container');
+        // Empty out the <div> before we append a GIF to it
+        responseContainerEl.innerHTML = '';
+        var gifImg = document.createElement('img');
+        gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+        // Append 'gifImg' to the <div>
+        responseContainerEl.appendChild(gifImg);
+      });
+  }
 
-loadGif().then((gif) => console.log(gif));
+  button.addEventListener(`click`, giphyMe);
 
-
-
-
-// you will need to get your own API KEY
-// https://developers.giphy.com/dashboard/
-// document.addEventListener("DOMContentLoaded", init);
-// function init() {
-//   document.getElementById("btnSearch").addEventListener("click", ev => {
-//     ev.preventDefault(); //to stop the page reload
-//     let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`;
-//     let str = document.getElementById("search").value.trim();
-//     url = url.concat(str);
-//     console.log(url);
-//     fetch(url)
-//       .then(response => response.json())
-//       .then(content => {
-//         //  data, pagination, meta
-//         console.log(content.data);
-//         console.log("META", content.meta);
-//         let fig = document.createElement("figure");
-//         let img = document.createElement("img");
-//         let fc = document.createElement("figcaption");
-//         img.src = content.data[0].images.downsized.url;
-//         img.alt = content.data[0].title;
-//         fc.textContent = content.data[0].title;
-//         fig.appendChild(img);
-//         fig.appendChild(fc);
-//         let out = document.querySelector(".out");
-//         out.insertAdjacentElement("afterbegin", fig);
-//         document.querySelector("#search").value = "";
-//       })
-//       .catch(err => {
-//         console.error(err);
-//       });
-//   });
-// }
