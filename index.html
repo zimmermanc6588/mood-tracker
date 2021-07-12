@@ -11,9 +11,10 @@
     <header>
         <h1>My Mood Tracker</h1>
     </header>
-    <div>
-        Enter time and date here
+    <div id="txt">
+        enter time and date here
     </div>
+    <script src="time.js"></script>
     <div>
         <form>
             <label for="mood">I am feeling:</label>
@@ -29,20 +30,19 @@
                 <label for="activity">I am:</label>
                 <input type="text">
             </p>
+            <button id="btnsearch">Find My Gif!</button>
         </form>
     </div>
     <div>
-        Div to hold gif
-        <section class="quotes">
-            <div class="quote-text" id="js-quote-text"></div>
-          </section>
-          <section class="controls">
-            <button type="button" id="js-new-quote" class="new-quote button">
-              Generate a new quote
-            </button>
-          </section>
-    
+
+        <div class="giphyme" id=response-container> </div>
     </div>
+    <script src="gif.js"></script>
+    <div>
+        Div to hold inspirational quote
+    </div>
+
+   
    <script src ="assets/js/quotes.js"></script>
     <script src="mood.js"></script>
 </body>
