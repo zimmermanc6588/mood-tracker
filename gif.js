@@ -34,3 +34,17 @@ function giphyMe(event) {
 
   button.addEventListener(`click`, giphyMe);
 
+// const loadGif = async () => {
+//     try {
+//         const url = `http://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`
+//         const res = await fetch(url);
+//         console.log(res.ok)
+//         const gif = await res.json();
+//         return gif;
+//     }catch(err) {
+//         console.error(err)
+//     }    
+//     document.getElementById("giphyme").innerHTML = '<center><img src = "'+gif+'"  title="GIF via Giphy"></center>';
+// };
+
+// loadGif().then((gif) => console.log(gif));

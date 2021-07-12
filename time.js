@@ -12,7 +12,7 @@ function startTime() {
     let y = today.getFullYear();
     m = checkTime(m);
     s = checkTime(s);
-    document.getElementById('txt').innerHTML = y + "/" + n + "/" + d + " " + h + ":" + m + ":" + s;
+    document.getElementById('txt').innerHTML = y + "/" + (n + 1) + "/" + d + " " + h + ":" + m + ":" + s;
     setTimeout(startTime, 1000);
   }
   
