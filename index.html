@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Your Mood</title>
     <link rel="stylesheet" href="./stylesheet.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 </head>
 <body>
-    <header>
+    <div class="container">
+    <header class="teal lighten-2">
         <h1>My Mood Tracker</h1>
     </header>
-    <div id="txt">
-        enter time and date here
+
+    <div class="col s3">
+        Enter time and date here
     </div>
-    <script src="time.js"></script>
-    <div>
-        <form>
-            <label for="mood">I am feeling:</label>
-            <select name="mood" id="mood">
-                <option value=""></option>
-                <option value="happy">Happy</option>
-                <option value="bored">Bored</option>
-                <option value="sad">Sad</option>
-                <option value="excited">Excited</option>
-                <option value="angry">Angry</option>
-            </select>
-            <p>
+    <div class="row">
+        <form class="col s12">
+            <div class="input-field col s6">
+                <select name="mood" id="mood">
+                    <option value="" disabled selected>Choose a mood</option>
+                    <option value="happy">Happy</option>
+                    <option value="bored">Bored</option>
+                    <option value="sad">Sad</option>
+                    <option value="excited">Excited</option>
+                    <option value="angry">Angry</option>
+                </select>
+                <label for="mood">I am feeling:</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="activity" type="text" class="validate" placeholder="Enter what you are currently doing here">
                 <label for="activity">I am:</label>
-                <input type="text">
-            </p>
-            <button id="btnsearch">Find My Gif!</button>
+            </div>
+
         </form>
     </div>
     <div>
@@ -42,8 +47,10 @@
         Div to hold inspirational quote
     </div>
 
-   
-   <script src ="assets/js/quotes.js"></script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
     <script src="mood.js"></script>
 </body>
 </html>
