@@ -1,5 +1,5 @@
 // 55L1FEuI3s75xESs6EeHvTCkRJreLIsO <-- Giphy API key
-const button = document.getElementById(`btnsearch`);
+const button = document.getElementById(`save-mood`);
 
 let APIKEY = `55L1FEuI3s75xESs6EeHvTCkRJreLIsO`;
 
