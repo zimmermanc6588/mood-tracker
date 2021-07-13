@@ -12,7 +12,7 @@
 https://zimmermanc6588.github.io/mood-tracker/
 
 ## Contribution
-Made by Marisa Bartelt, Jake Lee, Thomas Bewell and Clarissa Anderson
+Made by LABB. Otherwise know as: Jake Lee, Clarissa Anderson, Thomas Bewell and Marisa Bartelt.
 
 ## Thank you
 Special thanks to our instructor and our TAs who helped us. 
