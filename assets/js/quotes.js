@@ -24,7 +24,7 @@ async function getQuote() {
 
 
 
-const newQuoteButton = document.querySelector("#js-new-quote");
+const newQuoteButton = document.querySelector("#save-mood");
 newQuoteButton.addEventListener('click', getQuote);
 
 

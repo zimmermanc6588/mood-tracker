@@ -19,7 +19,6 @@
         Enter time and date here
         
     </div>
-         <script src="time.js"></script>
     <div class="row">
         <form class="col s12">
             <div class="input-field col s6">
@@ -37,39 +36,30 @@
                 <input id="activity" type="text" class="validate" placeholder="Enter what you are currently doing here">
                 <label for="activity">I am:</label>
             </div>
-  <button id="save-mood">Enter</button>
+            <button id="save-mood">Enter</button>
         </form>
     </div>
-    <div>
-
-        <div class="giphyme" id=response-container> </div>
-    </div>
-    <script src="gif.js"></script>
-
-
-       <div>
-        
-        <section class="quotes">
-            <div class="quote-text" id="js-quote-text"></div>
-          </section>
-          <section class="controls">
-            <button type="button" id="js-new-quote" class="new-quote button">
-              Generate a new quote
-            </button>
-          </section>
     
+    <div class="row">
+    <div class="col s6">
+        <div class="giphyme responsive-image" id=response-container> </div>
     </div>
-   <script src ="assets/js/quotes.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <div class="col s6">
+        <section class="quotes">
+            <div class="quote-text center-align" id="js-quote-text"></div>
+        </section>
+        
+    </div>
+    </div>
+    
     <div id="moods-list">
-        <ul>My Moods and Activities</ul>
     </div>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+    <script src="gif.js"></script>
     <script src="mood.js"></script>
+    <script src="time.js"></script>
+    <script src ="assets/js/quotes.js"></script>
 </body>
 </html>
