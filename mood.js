@@ -16,12 +16,22 @@ function storeUserInput(event) {
   let dropdownEl = document.getElementById("mood").value;
   let textInputEl = document.getElementById("activity").value;
   
-  userInput.push(dropdownEl, textInputEl);
+  userInput.push(dropdownEl + ", " + textInputEl);
   localStorage.setItem("userInput", JSON.stringify(userInput));
   let userData = (JSON.parse(localStorage.getItem("userInput")));
+
+  let loggedMood = document.createElement("ul");
+  loggedMood.classList = "collection with-header"
+  document.getElementById("moods-list").appendChild(loggedMood)
+  let header = document.createElement("li")
+  header.textContent = "My Logged Moods and Activities"
+  header.classList = "collection-header"
+  loggedMood.appendChild(header);
+
   let moodListItem = document.createElement("li");
-  moodListItem.innerHTML = userData.slice(-2);
-  document.getElementById("moods-list").appendChild(moodListItem);
+  moodListItem.textContent = userData.slice(-2);
+  moodListItem.classList = "collection-item"
+  loggedMood.appendChild(moodListItem);
 
   if (localStorage.getItem('userInput')) {
   userInput = JSON.parse(localStorage.getItem('userInput'))
