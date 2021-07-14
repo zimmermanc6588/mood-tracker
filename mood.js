@@ -5,7 +5,7 @@ $(document).ready(function(){
         
   
 
-let userInput = [];
+//let userInput = [];
 
 let saveBtnEl = document.getElementById("save-mood");
 
@@ -23,6 +23,15 @@ function storeUserInput(event) {
   moodListItem.innerHTML = userData.slice(-2);
   document.getElementById("moods-list").appendChild(moodListItem);
 
+  if (localStorage.getItem('userInput')) {
+  userInput = JSON.parse(localStorage.getItem('userInput'))
+  } else {
+  userInput = []
+  }
+
+
 }
 
 saveBtnEl.addEventListener("click", storeUserInput);
+
+
