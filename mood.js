@@ -5,12 +5,11 @@ $(document).ready(function(){
         
   
 
-//let userInput = [];
+let userInput = [];
 
 let saveBtnEl = document.getElementById("save-mood");
 
 function storeUserInput(event) {
-
   event.preventDefault();
     
   let dropdownEl = document.getElementById("mood").value;
@@ -32,14 +31,6 @@ function storeUserInput(event) {
   moodListItem.textContent = userData.slice(-2);
   moodListItem.classList = "collection-item"
   loggedMood.appendChild(moodListItem);
-
-  if (localStorage.getItem('userInput')) {
-  userInput = JSON.parse(localStorage.getItem('userInput'))
-  } else {
-  userInput = []
-  }
-
-
 }
 
 saveBtnEl.addEventListener("click", storeUserInput);
