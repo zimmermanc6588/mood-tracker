@@ -27,10 +27,12 @@ function giphyMe(event) {
         responseContainerEl.innerHTML = '';
         var gifImg = document.createElement('img');
         gifImg.setAttribute('src', response.data[0].images.fixed_height.url);
+        gifImg.classList = "gif-img"
         // Append 'gifImg' to the <div>
         responseContainerEl.appendChild(gifImg);
       });
   }
+
 
   button.addEventListener(`click`, giphyMe);
 
