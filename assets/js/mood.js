@@ -15,7 +15,7 @@ function storeUserInput(event) {
   let dropdownEl = document.getElementById("mood").value;
   let textInputEl = document.getElementById("activity").value;
   
-  userInput.push(dropdownEl + ", " + textInputEl);
+  userInput.push(dropdownEl, textInputEl);
   localStorage.setItem("userInput", JSON.stringify(userInput));
   let userData = (JSON.parse(localStorage.getItem("userInput")));
 
