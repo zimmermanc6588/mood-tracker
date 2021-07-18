@@ -13,3 +13,12 @@
 .item-logged {
     font-size: medium;
 }
+
+@media screen and (max-width: 575px) {
+.gif-img{
+    width: 100%;
+}
+/* .quote-text{
+    width: 100%;
+} */
+}
