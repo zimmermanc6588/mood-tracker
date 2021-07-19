@@ -14,7 +14,7 @@ function giphyMe(event) {
     fetch(
       'https://api.giphy.com/v1/gifs/search?q=' +
         searchTerm +
-        '&api_key=55L1FEuI3s75xESs6EeHvTCkRJreLIsO&limit=1'
+        '&rating=g&api_key=55L1FEuI3s75xESs6EeHvTCkRJreLIsO&limit=1'
     )
       .then(function(response) {
         return response.json();
